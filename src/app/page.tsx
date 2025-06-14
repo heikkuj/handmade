@@ -1,28 +1,15 @@
+'use client'
+
 import Image from "next/image";
+import Link from "next/link";
+import Navigation from '@/components/Navigation';
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div>
-      <div>
-        <h1>Header (home-button)</h1>
-      </div>
-
-      <div>
-        <b>navbar</b>
-        <ul>
-          <li>Menu</li>
-          <li>Online Storefront</li>
-          <li>Locations</li>
-          <li>About us</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-
-      <div>
-        <p>Hero-image</p>
-        <p>Call-to-action button</p>
-      </div>      
-
+      <Navigation />
+      <Footer />
     </div>
   );
 }
