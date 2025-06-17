@@ -50,9 +50,7 @@ export default function Footer() {
         </div>
 
         <Divider />
-
-        <p className='text-gray-400 mt-3'>©2025 Handmade Bakeries</p>
-        <Link href={'https://github.com/heikkuj'}><p className='text-gray-400 text-xs underline'>GitHub @ heikkuj</p></Link>
+        <Link href={'https://github.com/heikkuj'}><p className='text-gray-400 text-xs underline'>©2025 heikkuj @ GitHub</p></Link>
 
     </div>
   )
