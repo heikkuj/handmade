@@ -5,9 +5,9 @@ export default function HeroImg() {
     <div className='h-[20vh] text-shadow-md'>
       <img
         src={'/cupcakes.jpg'} 
-        alt='a'
+        alt='Cupcakes with Dutch wafflesand cream.'
         style={{objectFit: 'cover'}}
-        className='h-[20vh] w-full contrast-40 absolute -z-1'
+        className='h-[20vh] w-full brightness-75 absolute -z-1'
         />
         <div className='flex flex-col h-full justify-around p-6 text-white font-semibold text-xl'>
           <h1 className=''>Handmade.</h1>
