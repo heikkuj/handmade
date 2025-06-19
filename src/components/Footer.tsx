@@ -8,7 +8,7 @@ import Divider from './Divider';
 
 export default function Footer() {
   return (
-    <div className='absolute bottom-0 w-full bg-gray-100 p-5 text-sm'>
+    <div className='relative bottom-0 w-full bg-gray-100 p-5 text-sm'>
         <p>Subscribe to our newsletter for tasty Handmade discounts, news and much more!</p>
 
         <div className='flex gap-3 my-3'>
