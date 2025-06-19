@@ -14,10 +14,11 @@ import {
 
 export default function Navigation() {
   return (
-    <NavigationMenu>
+    <div className="flex justify-center">
+      <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Products</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <NavigationMenuLink asChild>
@@ -53,5 +54,6 @@ export default function Navigation() {
 
       </NavigationMenuList>
     </NavigationMenu>
+  </div>
   );
 }

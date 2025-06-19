@@ -3,6 +3,7 @@
 import Navigation from '@/components/Navigation';
 import Footer from "@/components/Footer";
 import CircularText from '@/components/CircularText';
+import HeroImg from '@/components/HeroImg';
 
 export default function Home() {
   return (
@@ -15,6 +16,11 @@ export default function Home() {
         className='custom-class' />
       </div>
       <Navigation />
+
+      <div>
+        <HeroImg />
+      </div>
+
       <Footer />
     </div>
   );
