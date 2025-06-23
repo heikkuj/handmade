@@ -20,7 +20,7 @@ export default function Home() {
       <HeroImg />
 
       <div>
-        <Card className='mx-3 my-5 text-center'>
+        <Card className='mx-3 my-8 text-center'>
           <CardHeader>
             <CardTitle>Our specialities</CardTitle>
           </CardHeader>
@@ -48,6 +48,29 @@ export default function Home() {
                 alt='Donuts' />
               </CardContent>
             </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Cakes</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <img 
+                src={'/pastel/cake.jpg'} 
+                alt='Donuts' />
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Drinks</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <img 
+                src={'/pastel/drink.jpg'} 
+                alt='Donuts' />
+              </CardContent>
+            </Card>
+
           </CardContent>
         </Card>
       </div>
