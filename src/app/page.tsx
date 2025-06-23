@@ -20,7 +20,7 @@ export default function Home() {
       <HeroImg />
 
       <div>
-        <Card className='mx-3 my-8 text-center'>
+        <Card className='mx-3 my-8 text-center bg-gray-50'>
           <CardHeader>
             <CardTitle>Our specialities</CardTitle>
           </CardHeader>
@@ -34,7 +34,9 @@ export default function Home() {
                 <img 
                 src={'/pastel/macron-mix.jpg'} 
                 alt='Macrons'
-                className='' />
+                width={'fill'}
+                height={'30%'}
+                className='rounded-md' />
               </CardContent>
             </Card>
 
@@ -45,7 +47,8 @@ export default function Home() {
               <CardContent>
                 <img 
                 src={'/pastel/donut.jpg'} 
-                alt='Donuts' />
+                alt='Donuts' 
+                className='rounded-md'/>
               </CardContent>
             </Card>
 
@@ -56,7 +59,8 @@ export default function Home() {
               <CardContent>
                 <img 
                 src={'/pastel/cake.jpg'} 
-                alt='Donuts' />
+                alt='Cakes' 
+                className='rounded-md'/>
               </CardContent>
             </Card>
 
@@ -67,7 +71,8 @@ export default function Home() {
               <CardContent>
                 <img 
                 src={'/pastel/drink.jpg'} 
-                alt='Donuts' />
+                alt='Drinks'
+                className='rounded-md' />
               </CardContent>
             </Card>
 

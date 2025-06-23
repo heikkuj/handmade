@@ -14,7 +14,7 @@ export default function Footer() {
         <div className='flex gap-3 my-3'>
             <form>
                 <div className='flex items-center gap-2'>
-                    <Input type="email" placeholder="Enter e-mail" 
+                    <Input type="email" id='email-id' placeholder="Enter e-mail" 
                     className='text-sm'/>
                     <Button type="submit" variant="outline"
                     className=''>Subscribe</Button>
