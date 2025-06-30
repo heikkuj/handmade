@@ -9,7 +9,7 @@ const EmailSchema = z
 .email({ message: 'Please enter a valid email address' });
 
 async function sendWelcomeEmail(email: string, apiKey: string, templateId: number) {
-    const url = `https://api.brevo/v3/smtp/email`;
+    const url = `https://api.brevo.com/v3/smtp/email`;
     const data = {
         to: [{ email }],
         templateId,
@@ -41,6 +41,21 @@ export const newSubscriberHandler = async (
         res: NextApiResponse<Data>
     ) => {
         try {
+            if (req.method !== 'POST') {
+                return res.status(405).json({ message: 'Method not allowed' });
+            }
+
+            const { email } = req.body;
+            
+            const emailValidation = EmailSchema.safeParse(email);
+            if (!emailValidation.success) {
+                return res.status(400).json({ 
+                    message: emailValidation.error.errors[0]?.message || 'Invalid email address' 
+                });
+            }
+
+            const validatedEmail = emailValidation.data;
+
             const API_KEY = process.env.BREVO_API_KEY;
             const TEMPLATE_ID = parseInt(process.env.BREVO_WELCOME_EMAIL_TEMPLATE_ID || '0', 10);
 
@@ -54,7 +69,7 @@ export const newSubscriberHandler = async (
                 return res.status(200).json({ message: 'Subscribed (Welcome email skipped - template ID not set)' });
             }
 
-            const emailSent = await sendWelcomeEmail(email, API_KEY, TEMPLATE_ID);
+            const emailSent = await sendWelcomeEmail(validatedEmail, API_KEY, TEMPLATE_ID);
 
             if (emailSent) {
                 console.log('Welcome email sent successfully!');
@@ -65,7 +80,7 @@ export const newSubscriberHandler = async (
             }
         } catch (error) {
             console.error('Error in new subscriber handler:', error);
-            return res.status(200).json({ message: 'Subscribed (Error sending welcome email)'});
+            return res.status(500).json({ message: 'Internal server error'});
         }
     };
 
