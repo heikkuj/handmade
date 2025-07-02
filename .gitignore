@@ -35,7 +35,7 @@ yarn-error.log*
 .env*
 
 # email template
-EmailTemplate.ts
+EmailTemplate.tsx
 
 # vercel
 .vercel
